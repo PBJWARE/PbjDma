@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PbjDma</title>
+<style>html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: 'Arial Rounded MT Bold', sans-serif;
+    background: linear-gradient(to bottom, black 0%, #7a5ccf 30%, #a288f5 60%, #d3bfff 100%);
+      color: white;
+    }
+
+    header {
+      background-color: black;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+
+    a:hover { transform: scale(1.2); filter: drop-shadow(0 0 10px white); }
+      background-color: #660066;
+      border-radius: 10px;
+    }
+
+    h1 {
+      font-size: 4rem;
+      margin: 100px 0 40px;
+      transition: color 0.3s, text-shadow 0.3s;
+    }
+
+    h1:hover {
+      color: #cc66ff;
+      text-shadow: 0 0 10px #cc66ff;
+    }
+
+    .pricing {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 40px;
+    }
+
+    .plan {
+      background-color: #2e003e;
+      padding: 20px;
+      border-radius: 20px;
+      text-align: center;
+      width: 200px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .plan:hover {
+      box-shadow: 0 0 15px #cc66ff;
+      transform: translateY(-5px);
+    }
+
+    .plan.best-deal {
+      border: 3px solid gold;
+    }
+
+    .price {
+      font-size: 2rem;
+      margin: 10px 0;
+    }
+
+    .socials {
+      text-align: center;
+      padding: 30px;
+    }
+
+    .socials a {
+      margin: 0 15px;
+      font-size: 2rem;
+      text-decoration: none;
+    }
+
+    .socials .discord { color: #5865F2; }
+    .socials .youtube { color: #FF0000; }
+    .socials .tiktok { color: #25F4EE; }
+    .socials .instagram { color: #C13584; }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: gray;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      background: #800080;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #cc66ff;
+      box-shadow: 0 0 10px #cc66ff;
+    }
+  
+
+    .trail {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      background: white;
+      border-radius: 50%;
+      pointer-events: none;
+      box-shadow: 0 0 15px white;
+      z-index: 9999;
+      opacity: 0.7;
+    }</style>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+</head>
+<body><div id="top"></div>
+<header>
+<nav>
+<ul>
+<li><a href="#top">Home</a></li>
+<li><a href="#pricing">Payment</a></li>
+<li><a href="#socials">Social</a></li>
+</ul>
+</nav>
+<h1 id="home" style="font-size: 4.5rem; text-align: center; margin-top: 120px; color: #a288f5;">PbjDma</h1><div style="height: 200px;"></div>
+</header>
+<section class="pricing" id="pricing">
+<div class="plan">
+<h3>Day Access</h3>
+<p>24 hours of access</p>
+<div class="price">$5</div>
+<button>Purchase</button>
+</div>
+<div class="plan">
+<h3>Weekly Access</h3>
+<p>7 days of access</p>
+<div class="price">$15</div>
+<button>Purchase</button>
+</div>
+<div class="plan best-deal">
+<h3>Monthly Access</h3>
+<p>30 days of access</p>
+<div class="price">$35</div>
+<button>Purchase</button>
+<p><strong>Best Deal!</strong></p>
+</div>
+<div class="plan">
+<h3>Lifetime Access</h3>
+<p>Permanent access</p>
+<div class="price">$350</div>
+<button>Purchase</button>
+</div>
+</section>
+<section class="socials" id="socials">
+<h2>Follow Us</h2>
+<a class="discord" href="https://discord.gg/TYzfW6YZ"><i class="fab fa-discord"></i></a>
+<a class="youtube" href="https://www.youtube.com/@PBJWARE"><i class="fab fa-youtube"></i></a>
+<a class="tiktok" href="https://www.tiktok.com/@pb_j_ware"><i class="fab fa-tiktok"></i></a>
+<a class="instagram" href="https://www.instagram.com/pb_j_ware/"><i class="fab fa-instagram"></i></a>
+</section>
+<footer>
+  © 2025 PbjDma. All rights reserved.
+</footer>
+<script>
+document.addEventListener("mousemove", function(e) {
+  const trail = document.createElement("div");
+  trail.className = "trail";
+  trail.style.left = (e.clientX - 5) + "px";
+  trail.style.top = (e.clientY - 5) + "px";
+  document.body.appendChild(trail);
+  setTimeout(() => {
+    if (trail && trail.remove) trail.remove();
+  }, 300);
+});
+</script></body>
+</html>
